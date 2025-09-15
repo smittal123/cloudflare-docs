@@ -1,0 +1,33 @@
+
+---
+title: DNS Firewall Analytics — now in the Dashboard
+description: Quickly set up common rules with pre-built templates.
+date: 2025-09-16
+preview_image: DNSFW_Analytics_UI
+---
+
+# What’s New
+
+Access [GraphQL-powered DNS Firewall analytics](https://developers.cloudflare.com/dns/dns-firewall/analytics/) directly in the Cloudflare dashboard.
+
+## Explore Four Interactive Panels
+
+- **Query summary** — Trends over time, segmented by dimensions.  
+- **Query statistics** — Totals, cached/uncached queries, and processing/response times.  
+- **DNS queries by data center** — Global view plus top 10 data centers.  
+- **Top query statistics** — Breakdowns by key dimensions, with search and expand options (up to top 100 items).  
+
+Additional features:  
+
+- Apply filters and time ranges once — changes reflect across all panels.  
+- Filter by dimensions like query name, query type, cluster, data center, protocol (UDP/TCP), IP version, response code/reason, and more.  
+- Access up to 62 days of historical data with flexible intervals.  
+
+## Who Gets It
+
+Available to all DNS Firewall customers as part of their existing subscription.
+
+## Where to Find It
+
+- Go to [**Analytics > DNS Firewall**](https://dash.cloudflare.com/?to=/:account/dns-firewall/analytics) in the Cloudflare Dashboard.  
+- [Read more to learn about DNS Firewall Analytics](https://developers.cloudflare.com/dns/dns-firewall/analytics/)
