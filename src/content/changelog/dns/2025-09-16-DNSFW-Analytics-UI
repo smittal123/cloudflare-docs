@@ -20,7 +20,7 @@ Access [GraphQL-powered DNS Firewall analytics](/dns/dns-firewall/analytics/) di
 
 Additional features:  
 
-- Apply filters and time ranges once — changes reflect across all panels.  
+- Apply filters and time ranges once. Changes reflect across all panels.  
 - Filter by dimensions like query name, query type, cluster, data center, protocol (UDP/TCP), IP version, response code/reason, and more.  
 - Access up to 62 days of historical data with flexible intervals.  
 
