@@ -20,10 +20,13 @@ entries:
       * Using the [DNS Records API](/api/resources/dns/subresources/records/) to change the type of an existing record is deprecated.
 
       Replacement behavior:
+
       To change a record's type, clients must:
       * [Delete the existing DNS record](/api/resources/dns/subresources/records/methods/delete/)
+
         `DELETE /zones/{zone_id}/dns_records/{dns_record_id}`
       * [Create a new DNS record with the desired type and content](/api/resources/dns/subresources/records/methods/create/)
+
         `POST /zones/{zone_id}/dns_records`
 
       Customers and integrations that rely on in-place record type updates must migrate to a delete-and-recreate workflow before June 30, 2026 to ensure uninterrupted service. After this date, attempts to change a record's type via update operations will no longer be supported.
