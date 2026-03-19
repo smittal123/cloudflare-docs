@@ -45,7 +45,7 @@ The table below provides a summary of the Data Localization Suite product's beha
 | Advanced DDoS Protection     | ✅              | ✅                | 🚧 [^3]                    |
 | API Shield                   | ✅              | ✅                | 🚧 [^4]                    |
 | Bot Management               | ✅              | ✅                | ✅                         |
-| DNS Firewall                 | ⚫️             | ⚫️               | 🚧 [^22]                   |
+| DNS Firewall                 | ⚫️             | ⚫️               | 🚧 [^32]                   |
 | Page Shield                  | ✅              | ✅                | ✅                         |
 | Rate Limiting                | ✅              | ✅                | ✅ [^37]                   |
 | SSL                          | ✅              | ✅                | ✅                         |
@@ -174,7 +174,7 @@ The table below provides a summary of the Data Localization Suite product's beha
 
 [^31]: DLP is part of Gateway HTTP, however, [DLP detection entries](/cloudflare-one/data-loss-prevention/detection-entries/) are not available outside US region when using Customer Metadata Boundary.
 
-[^32]: Dashboard Analytics are empty when using CMB outside the US region. Use Logpush instead.
+[^32]: Dashboard Analytics are empty when using CMB outside the US or EU region. Use Logpush instead.
 
 [^33]: [Outgoing zone transfers](/dns/zone-setups/zone-transfers/cloudflare-as-primary/) will carry Earth region proxy IPs, thus making regional service dysfunctional when non-Cloudflare nameservers respond to the DNS queries.
 
