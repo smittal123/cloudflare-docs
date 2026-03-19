@@ -4,6 +4,8 @@ description: DNS Analytics and DNS Firewall Analytics now support accounts with 
 date: 2026-03-20
 ---
 
+import { DashButton } from "~/components";
+
 DNS Analytics is now available for customers with [Customer Metadata Boundary](/data-localization/metadata-boundary/) (CMB) set to EU. Query your DNS analytics data while keeping metadata stored in the EU region.
 
 This update includes:
@@ -18,7 +20,12 @@ Available to customers with the [Data Localization Suite](/data-localization/) w
 
 ## Where to find it
 
-- **Authoritative DNS:** Select your zone, then go to **DNS** > **Analytics** in the [Cloudflare dashboard](https://dash.cloudflare.com/?to=/:account/:zone/dns/analytics).
-- **DNS Firewall:** Go to **Networking** > **DNS Firewall** > **Analytics** in the [Cloudflare dashboard](https://dash.cloudflare.com/?to=/:account/dns-firewall/analytics).
+- **Authoritative DNS:** In the Cloudflare dashboard, select your zone and go to the **Analytics** page.
 
-For more information, refer to [DNS Analytics](/dns/analytics/) and [DNS Firewall Analytics](/dns/dns-firewall/analytics/).
+  <DashButton url="/?to=/:account/:zone/dns/analytics" />
+
+- **DNS Firewall:** In the Cloudflare dashboard, go to the **DNS Firewall Analytics** page.
+
+  <DashButton url="/?to=/:account/dns-firewall/analytics" />
+
+For more information, refer to [DNS Analytics](/dns/additional-options/analytics/) and [DNS Firewall Analytics](/dns/dns-firewall/analytics/).
