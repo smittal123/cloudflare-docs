@@ -33,12 +33,12 @@ Due to DNS caching by recursive resolvers, the transitions from proxied to DNS-o
 
 Enforce DNS-only works across all zone setup types:
 
-- [Full setup](/dns/zone-setups/full-setup/): All proxied records in the zone are affected.
-- [Partial (CNAME) setup](/dns/zone-setups/partial-setup/): All proxied records in the zone are affected.
-- [Secondary zones](/dns/zone-setups/zone-transfers/cloudflare-as-secondary/): If [Secondary DNS Overrides](/dns/zone-setups/zone-transfers/cloudflare-as-secondary/proxy-traffic/) is enabled and you have manually set a record's proxy status to proxied, that record will be affected. Records transferred from the primary with their original proxy status are not affected since they are already DNS-only.
+- [Full setup](/dns/zone-setups/full-setup/): All proxied records in the zone are affected (see [exceptions](/dns/proxy-status/enforce-dns-only/#excluded)).
+- [Partial (CNAME) setup](/dns/zone-setups/partial-setup/): All proxied records in the zone are affected (see [exceptions](/dns/proxy-status/enforce-dns-only/#excluded)).
+- [Secondary zones](/dns/zone-setups/zone-transfers/cloudflare-as-secondary/): If [Secondary DNS Overrides](/dns/zone-setups/zone-transfers/cloudflare-as-secondary/proxy-traffic/) is enabled and you have manually set a record's proxy status to proxied, that record will be affected.
 
 :::note
-For secondary zones with overrides enabled, the enforce DNS-only setting will grey-cloud any record you have manually proxied. The proxy status override persists until the record is deleted on the primary and transferred again — changes to content or TTL on the primary do not reset the override.
+For secondary zones with overrides enabled, the enforce DNS-only setting will disable the proxy status on any record you have manually proxied. The proxy status override persists until the record is deleted on the primary even if it gets transferred again — changes to content or TTL on the primary do not affect the proxy status.
 :::
 
 ## Preparation
