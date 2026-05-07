@@ -37,9 +37,9 @@ Enforce DNS-only works across all zone setup types:
 - [Partial (CNAME) setup](/dns/zone-setups/partial-setup/): Proxied records in the zone are generally affected, considering a few [exceptions](/dns/proxy-status/enforce-dns-only/#excluded).
 - [Secondary zones](/dns/zone-setups/zone-transfers/cloudflare-as-secondary/): If [Secondary DNS Overrides](/dns/zone-setups/zone-transfers/cloudflare-as-secondary/proxy-traffic/) is enabled and you have manually set a record's proxy status to proxied, that record will be affected.
 
-:::note
-For secondary zones with overrides enabled, the enforce DNS-only setting will disable the proxy status on any record you have manually proxied. The proxy status override persists until the record is deleted on the primary even if it gets transferred again — changes to content or TTL on the primary do not affect the proxy status.
-:::
+  :::note[Zone transfers interaction]
+  While enforce DNS-only is active, zone transfers from the primary (including content or TTL changes) do not change the proxy status of affected records. When you [disable enforce DNS-only](#disable-enforce-dns-only), the records return to proxied.
+  :::
 
 ## Preparation
 
@@ -102,9 +102,9 @@ Enforce DNS-only does not affect the following records:
 - [Tunnel](/tunnel/): CNAME records pointing to a tunnel subdomain. Refer to [Tunnel routing](/tunnel/routing/#create-a-dns-record) or [Cloudflare One](/cloudflare-one/networks/connectors/cloudflare-tunnel/routing-to-tunnel/dns/) for details.
 - [Web3 gateways](/web3/): Read-only proxied records managed by the [Web3 gateway configuration](/web3/reference/gateway-dns-records/).
 - [Workers](/workers/) custom domains: Read-only proxied records added to the DNS records table when you set up Workers [custom domains](/workers/configuration/routing/custom-domains/).
-   :::note[Custom domain or route match]
-	 Proxied records that match a Worker [route](/workers/configuration/routing/routes/) are regular DNS records and will be [affected](#included) by the enforce DNS-only setting.
-   :::
+  :::note[Custom domain or route match]
+  Proxied records that match a Worker [route](/workers/configuration/routing/routes/) are regular DNS records and will be [affected](#included) by the enforce DNS-only setting.
+  :::
 
 ## Check current status
 
